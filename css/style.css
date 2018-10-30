@@ -100,6 +100,20 @@ header{
   margin-top: 10px;
 }
 
+.popup-img-new{
+  background-position: center;
+  background-size: contain;
+  background-repeat: no-repeat;
+	width: 160px;
+  height: 200px;
+  margin-top: 10px;
+}
+
+.caracteristic-clicked{
+  opacity : 0.5;
+  pointer-events: none;
+}
+
 .popup-welcome .popup-img{
   width: 100px;
   height: 100px;
@@ -149,6 +163,12 @@ h5{
 
 .blocked{
   pointer-events: none;
+}
+
+.front-people:hover{
+  width: 159px;
+  height: 200px;
+  position: absolute;
 }
 
 @media (max-width:1199px){

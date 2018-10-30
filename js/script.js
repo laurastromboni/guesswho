@@ -8,7 +8,8 @@ var people = [
     facialHair: 'facialhair-no',
     skin: 'skin-white',
     glasses: 'glasses-yes',
-    frenchNative: 'frenchnative-no' },
+    frenchNative: 'frenchnative-no',
+    nudeImg : 'Avatar_Nude_Abi.png' },
   { name: 'adele',
     img: 'Avatar_Adele.png',
     genre: 'genre-female',
@@ -18,7 +19,8 @@ var people = [
     facialHair: 'facialhair-no',
     skin: 'skin-white',
     glasses: 'glasses-yes',
-    frenchNative: 'frenchnative-yes' },
+    frenchNative: 'frenchnative-yes',
+    nudeImg : 'Avatar_Nude_Adele.png' },
   { name: 'amine',
     img: 'Avatar_Amine.png',
     genre: 'genre-male',
@@ -28,7 +30,8 @@ var people = [
     facialHair: 'facialhair-no',
     skin: 'skin-metis',
     glasses: 'glasses-yes',
-    frenchNative: 'frenchnative-yes' },
+    frenchNative: 'frenchnative-yes',
+    nudeImg : 'Avatar_Nude_Amine.png' },
   { name: 'antoine',
     img: 'Avatar_Antoine.png',
     genre: 'genre-male',
@@ -38,7 +41,8 @@ var people = [
     facialHair: 'facialhair-yes',
     skin: 'skin-white',
     glasses: 'glasses-yes',
-    frenchNative: 'frenchnative-yes' },
+    frenchNative: 'frenchnative-yes',
+    nudeImg : 'Avatar_Nude_Antoine.png' },
   { name: 'cecile',
     img: 'Avatar_Cecile.png',
     genre: 'genre-female',
@@ -48,7 +52,8 @@ var people = [
     facialHair: 'facialhair-no',
     skin: 'skin-white',
     glasses: 'glasses-no',
-    frenchNative: 'frenchnative-yes' },
+    frenchNative: 'frenchnative-yes',
+    nudeImg : 'Avatar_Nude_Cecile.png' },
   { name: 'chloe',
     img: 'Avatar_Chloe.png',
     genre: 'genre-female',
@@ -58,7 +63,8 @@ var people = [
     facialHair: 'facialhair-no',
     skin: 'skin-white',
     glasses: 'glasses-yes',
-    frenchNative: 'frenchnative-yes' },
+    frenchNative: 'frenchnative-yes',
+    nudeImg : 'Avatar_Nude_Chloe.png' },
   { name: 'christian',
     img: 'Avatar_Christian.png',
     genre: 'genre-male',
@@ -68,7 +74,8 @@ var people = [
     facialHair: 'facialhair-no',
     skin: 'skin-black',
     glasses: 'glasses-no',
-    frenchNative: 'frenchnative-no' },
+    frenchNative: 'frenchnative-no',
+    nudeImg : 'Avatar_Nude_Christian.png' },
   { name: 'corrado',
     img: 'Avatar_Corrado.png',
     genre: 'genre-male',
@@ -78,7 +85,8 @@ var people = [
     facialHair: 'facialhair-no',
     skin: 'skin-white',
     glasses: 'glasses-yes',
-    frenchNative: 'frenchnative-yes' },
+    frenchNative: 'frenchnative-yes',
+    nudeImg : 'Avatar_Nude_Corrado.png' },
   { name: 'fareaha',
     img: 'Avatar_Fareaha.png',
     genre: 'genre-female',
@@ -88,7 +96,8 @@ var people = [
     facialHair: 'facialhair-no',
     skin: 'skin-metis',
     glasses: 'glasses-no',
-    frenchNative: 'frenchnative-no' },
+    frenchNative: 'frenchnative-no',
+    nudeImg : 'Avatar_Nude_Fareaha.png' },
   { name: 'filippo',
     img: 'Avatar_Filippo.png',
     genre: 'genre-male',
@@ -98,7 +107,8 @@ var people = [
     facialHair: 'facialhair-yes',
     skin: 'skin-white',
     glasses: 'glasses-no',
-    frenchNative: 'frenchnative-no' },
+    frenchNative: 'frenchnative-no',
+    nudeImg : 'Avatar_Nude_Filippo.png' },
   { name: 'geoffroy',
     img: 'Avatar_Geoffroy.png',
     genre: 'genre-male',
@@ -108,7 +118,8 @@ var people = [
     facialHair: 'facialhair-yes',
     skin: 'skin-metis',
     glasses: 'glasses-no',
-    frenchNative: 'frenchnative-yes' },
+    frenchNative: 'frenchnative-yes',
+    nudeImg : 'Avatar_Nude_Geoffroy.png' },
   { name: 'harnit',
     img: 'Avatar_Harnit.png',
     genre: 'genre-female',
@@ -118,7 +129,8 @@ var people = [
     facialHair: 'facialhair-no',
     skin: 'skin-metis',
     glasses: 'glasses-yes',
-    frenchNative: 'frenchnative-no' },
+    frenchNative: 'frenchnative-no',
+    nudeImg : 'Avatar_Nude_Harnit.png' },
   { name: 'heather',
     img: 'Avatar_Heather.png',
     genre: 'genre-female',
@@ -128,7 +140,8 @@ var people = [
     facialHair: 'facialhair-no',
     skin: 'skin-white',
     glasses: 'glasses-no',
-    frenchNative: 'frenchnative-no' },
+    frenchNative: 'frenchnative-no',
+    nudeImg : 'Avatar_Nude_Heather.png' },
   { name: 'helen',
     img: 'Avatar_Helen.png',
     genre: 'genre-female',
@@ -138,7 +151,8 @@ var people = [
     facialHair: 'facialhair-no',
     skin: 'skin-black',
     glasses: 'glasses-no',
-    frenchNative: 'frenchnative-no' },
+    frenchNative: 'frenchnative-no',
+    nudeImg : 'Avatar_Nude_Helen.png' },
   { name: 'jean ni',
     img: 'Avatar_Jean-Ni.png',
     genre: 'genre-male',
@@ -148,7 +162,8 @@ var people = [
     facialHair: 'facialhair-no',
     skin: 'skin-white',
     glasses: 'glasses-no',
-    frenchNative: 'frenchnative-yes' },
+    frenchNative: 'frenchnative-yes',
+    nudeImg : 'Avatar_Nude_Jean-Ni.png' },
   { name: 'laura',
     img: 'Avatar_Laura.png',
     genre: 'genre-female',
@@ -158,7 +173,8 @@ var people = [
     facialHair: 'facialhair-no',
     skin: 'skin-white',
     glasses: 'glasses-yes',
-    frenchNative: 'frenchnative-yes' },
+    frenchNative: 'frenchnative-yes',
+    nudeImg : 'Avatar_Nude_Laura.png' },
   { name: 'marie',
     img: 'Avatar_Marie.png',
     genre: 'genre-female',
@@ -168,7 +184,8 @@ var people = [
     facialHair: 'facialhair-no',
     skin: 'skin-white',
     glasses: 'glasses-no',
-    frenchNative: 'frenchnative-yes' },
+    frenchNative: 'frenchnative-yes',
+    nudeImg : 'Avatar_Nude_Marie.png' },
   { name: 'mathis',
     img: 'Avatar_Mathis.png',
     genre: 'genre-male',
@@ -178,7 +195,8 @@ var people = [
     facialHair: 'facialhair-no',
     skin: 'skin-white',
     glasses: 'glasses-no',
-    frenchNative: 'frenchnative-yes' },
+    frenchNative: 'frenchnative-yes',
+    nudeImg : 'Avatar_Nude_Mathis.png' },
   { name: 'mehdi',
     img: 'Avatar_Mehdi.png',
     genre: 'genre-male',
@@ -188,7 +206,8 @@ var people = [
     facialHair: 'facialhair-yes',
     skin: 'skin-metis',
     glasses: 'glasses-no',
-    frenchNative: 'frenchnative-yes' },
+    frenchNative: 'frenchnative-yes',
+    nudeImg : 'Avatar_Nude_Mehdi.png' },
   { name: 'niccolo',
     img: 'Avatar_Niccolo.png',
     genre: 'genre-male',
@@ -198,7 +217,8 @@ var people = [
     facialHair: 'facialhair-no',
     skin: 'skin-white',
     glasses: 'glasses-no',
-    frenchNative: 'frenchnative-no' },
+    frenchNative: 'frenchnative-no',
+    nudeImg : 'Avatar_Nude_Niccolo.png' },
   { name: 'nicolas',
     img: 'Avatar_Nicolas.png',
     genre: 'genre-male',
@@ -208,7 +228,8 @@ var people = [
     facialHair: 'facialhair-no',
     skin: 'skin-white',
     glasses: 'glasses-no',
-    frenchNative: 'frenchnative-yes' },
+    frenchNative: 'frenchnative-yes',
+    nudeImg : 'Avatar_Nude_Nicolas.png' },
   { name: 'nizar',
     img: 'Avatar_Nizar.png',
     genre: 'genre-male',
@@ -218,7 +239,8 @@ var people = [
     facialHair: 'facialhair-yes',
     skin: 'skin-white',
     glasses: 'glasses-no',
-    frenchNative: 'frenchnative-no' },
+    frenchNative: 'frenchnative-no',
+    nudeImg : 'Avatar_Nude_Nizar.png' },
   { name: 'paul',
     img: 'Avatar_Paul.png',
     genre: 'genre-male',
@@ -228,7 +250,8 @@ var people = [
     facialHair: 'facialhair-no',
     skin: 'skin-white',
     glasses: 'glasses-no',
-    frenchNative: 'frenchnative-yes' },
+    frenchNative: 'frenchnative-yes',
+    nudeImg : 'Avatar_Nude_Paul.png' },
   { name: 'priyanka',
     img: 'Avatar_Priyanka.png',
     genre: 'genre-female',
@@ -238,7 +261,8 @@ var people = [
     facialHair: 'facialhair-no',
     skin: 'skin-metis',
     glasses: 'glasses-yes',
-    frenchNative: 'frenchnative-no' },
+    frenchNative: 'frenchnative-no',
+    nudeImg : 'Avatar_Nude_Priyanka.png' },
   { name: 'regis',
     img: 'Avatar_Regis.png',
     genre: 'genre-male',
@@ -248,7 +272,8 @@ var people = [
     facialHair: 'facialhair-no',
     skin: 'skin-white',
     glasses: 'glasses-no',
-    frenchNative: 'frenchnative-yes' }
+    frenchNative: 'frenchnative-yes',
+    nudeImg : 'Avatar_Nude_Regis.png' }
 ];
 
 $(document).ready(function(){
@@ -278,12 +303,21 @@ $(document).ready(function(){
   var guessWhoPeople = people[Math.floor(Math.random()*people.length)];
   console.log(guessWhoPeople);
 
+    // create the HTML img divs for each people
+    var htmlTwo = $(
+      '<div class="popup-img-new" style="background: url(img/'+ guessWhoPeople.nudeImg + '); background-size: contain;background-position: center;background-repeat: no-repeat"></div>'
+    );
+    // Add all the div's to the HTML
+    $('.popnew h2').after(htmlTwo);
+
   // main feature : hide the wrong people after clicking on caracteristics buttons
   var buttons = $(".caracteristic");
   var guessWho = new GuessWho(people);
   buttons.click(function (e){
+    var currentbutton = $(event.target);
     guessWho.updateChances()
     console.log(e.currentTarget);
+    currentbutton.addClass("caracteristic-clicked")
     var firstClass = e.currentTarget.className.split(' ')[1];
     var secondClass = e.currentTarget.className.split(' ')[2];
     var people = $(".people");
@@ -293,16 +327,25 @@ $(document).ready(function(){
         if (!$(this).hasClass(secondClass)){
           $(this).css({"opacity" : "0"});
           $(this).addClass("hidden-people");
+          $(this).addClass("blocked");
         } 
       } else {
         if ($(this).hasClass(secondClass)){
           $(this).css({"opacity" : "0"});
           $(this).addClass("hidden-people");
+          $(this).addClass("blocked");
         }
       }
     })
     guessWho.isFinished()
   });
+
+  // restart the game
+  var restartgame = $(".btn-restart");
+  restartgame.click(function (){
+    window.location.reload();
+    startgame.css({"display" : "none"});
+  })
 
   // click directly on people to try to find the guessWhoPeople
   var peoplebutton = $(".people");
@@ -316,6 +359,7 @@ $(document).ready(function(){
     } else {
       $(pers).css({"opacity" : "0"});
       $(pers).addClass("hidden-people");
+      $(pers).addClass("blocked");
     }
   })
 
