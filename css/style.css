@@ -165,11 +165,11 @@ h5{
   pointer-events: none;
 }
 
-.front-people:hover{
+/* .front-people:hover{
   width: 159px;
   height: 200px;
   position: absolute;
-}
+} */
 
 @media (max-width:1199px){
 
