@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+  <head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.1/css/all.css" integrity="sha384-5sAR7xN1Nv6T6+dT2mhtzEpVJvfS3NScPQTrOxhwjIuvcA67KV2R5Jz6kr4abQsz" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+    <!-- Your CSS AFTER the bootstrap CSS to customize and styling-->
+    <link rel="stylesheet" href="./css/style.css">
+
+    <title>Guess Who ?</title>
+
+  </head>
+
+  <body>
+    
+    <header>
+
+      <div class="logo">
+      </div>
+
+    </header>
+
+    <section class="popup popup-welcome">
+      <div class="pop">
+        <h2>Welcome to the Guess Who game !</h2>
+        <h6>You have to guess which hidden character the computer has chose.</h6>
+        <h6>For this, you need to choose some characteristics inside a list.</h6>
+        <h6>Be careful, you have limited remaining chances to find it !</h6>
+        <h6>Good luck !</h6>
+        <div class="popup-img"></div>
+        <button type="button" class="btn btn-popup-welcome">Start the game</button>
+      </div>
+    </section>
+
+    <section class="popup popup-looser">
+      <div class="pop">
+        <h2>Uh… You’re LOOSE. Try again !</h2>
+        <div class="popup-img"></div>
+        <button type="button" class="btn btn-popup-looser">Restart the game</button>
+      </div>
+    </section>
+
+    <section class="popup popup-winer">
+      <div class="pop">
+        <h2>You WIN ! Well Done !!!</h2>
+        <div class="popup-img"></div>
+        <button type="button" class="btn btn-popup-winer">Restart the game</button>
+      </div>
+    </section>
+
+    <section class="game">
+
+      <div class="container">
+          <div class="row">
+            <div class="col-lg-3 col-md-6 col-sm-6 col-xs-6 left-side-column order-lg-1 order-md-1 order-sm-1 order-xs-1">
+              <div class="genre-row">
+                <h5>Gender</h5>
+                <div class="genre-content item-content">
+                  <img src="img/Genre-female.svg" class="caracteristic genre genre-female"/>
+                  <img src="img/Genre-male.svg" class="caracteristic genre genre-male" />
+                </div>
+              </div>
+              <div class="skincolor-row">
+                <h5>Skin Color</h5>
+                <div class="skincolor-content item-content">
+                  <img src="img/Skin-white.svg" class="caracteristic skin skin-white"/>
+                  <img src="img/Skin-metis.svg" class="caracteristic skin skin-metis" />
+                  <img src="img/Skin-brown.svg" class="caracteristic skin skin-black" />
+                </div>
+              </div>
+              <div class="eyescolor-row">
+                <h5>Eyes Color</h5>
+                <div class="eyescolor-content item-content">
+                  <img src="img/Eyes-brown.svg" class="caracteristic eyesColor eyes-brown"/>
+                  <img src="img/Eyes-green.svg" class="caracteristic eyesColor eyes-green" />
+                  <img src="img/Eyes-blue.svg" class="caracteristic eyesColor eyes-blue" />
+                </div>
+              </div>
+              <div class="glasses-row">
+                <h5>Glasses</h5>
+                <div class="glasses-content item-content">
+                  <img src="img/Yes.svg" class="caracteristic glasses glasses-yes" />
+                  <img src="img/No.svg" class="caracteristic glasses glasses-no" />
+                </div>
+              </div>
+            </div>
+            <div class="col-lg-6 col-sm-12 col-xs-12 middle-column order-lg-2 order-md-3 order-sm-3 order-xs-3">
+              <div id="game-table">
+                <div id="avatars-board"></div>
+              </div>
+            </div>
+            <div class="col-lg-3 col-md-6 col-sm-6 col-xs-6 right-side-column order-lg-3 order-md-2 order-sm-2 order-xs-2">
+              <div class="facialhair-row">
+                <h5>Facial Hair</h5>
+                <div class="facialhair-content item-content">
+                  <img src="img/Yes.svg" class="caracteristic facialHair facialhair-yes" />
+                  <img src="img/No.svg" class="caracteristic facialHair facialhair-no" />
+                </div>
+              </div>
+              <div class="haircut-row">
+                <h5>Haircut</h5>
+                <div class="haircut-content item-content">
+                  <img src="img/Haircut-short.svg" class="caracteristic haircut haircut-short"/>
+                  <img src="img/Haircut-medium.svg" class="caracteristic haircut haircut-medium" />
+                  <img src="img/Haircut-long.svg" class="caracteristic haircut haircut-long" />
+                </div>
+              </div>
+              <div class="haircolor-row">
+                <h5>Hair Color</h5>
+                <div class="haircolor-content item-content">
+                  <img src="img/Haircolor-blond.svg" class="caracteristic hairColor hair-blond"/>
+                  <img src="img/Haircolor-ginger.svg" class="caracteristic hairColor hair-ginger" />
+                  <img src="img/Haircolor-brown.svg" class="caracteristic hairColor hair-brown" />
+                  <img src="img/Haircolor-black.svg" class="caracteristic hairColor hair-black" />
+                </div>
+              </div>
+              <div class="frenchnative-row">
+                <h5>French Native</h5>
+                <div class="frenchnative-content item-content">
+                  <img src="img/Yes.svg" class="caracteristic frenchNative frenchnative-yes" />
+                  <img src="img/No.svg" class="caracteristic frenchNative frenchnative-no" />
+                </div>
+              </div>
+            </div>
+          </div>
+      </div>
+
+    </section>
+
+    <footer>
+      <div id="chances">
+        <h5>Remaining chances : <span id="remaining-chances">5</span></h5>
+      </div>
+    </footer>
+
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+    <!-- Your JS AFTER the Bootstrap in case you need to use Bootstrap functions -->
+    <script src = "./js/script.js"></script>
+
+  </body>
+
+</html>
