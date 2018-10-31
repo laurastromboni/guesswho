@@ -316,13 +316,57 @@ $(document).ready(function(){
   buttons.click(function (e){
     var currentbutton = $(event.target);
     guessWho.updateChances()
-    console.log(e.currentTarget);
-    currentbutton.addClass("caracteristic-clicked")
+    // console.log(e.currentTarget);
+
+    // add a new class to the characteristic (<img>) clicked
+    currentbutton.addClass("caracteristic-clicked");
+    // genre :
+    var genreNotClickedYet = $(".genre").not(".caracteristic-clicked"); // returns the genre which is not clicked yet
+    if (genreNotClickedYet.length === 1){
+      genreNotClickedYet.addClass("caracteristic-clicked");
+    }
+    //eyes color :
+    var eyesColorNotClickedYet = $(".eyesColor").not(".caracteristic-clicked"); 
+    if (eyesColorNotClickedYet.length === 1) {
+      eyesColorNotClickedYet.addClass("caracteristic-clicked");
+    }
+    //skin :
+    var skinNotClickedYet = $(".skin").not(".caracteristic-clicked");
+    if (skinNotClickedYet.length === 1) {
+      skinNotClickedYet.addClass("caracteristic-clicked");
+    }
+    // glasses :
+    var glassesNotClickedYet = $(".glasses").not(".caracteristic-clicked");
+    if (glassesNotClickedYet.length === 1){
+      glassesNotClickedYet.addClass("caracteristic-clicked");
+    }
+    // facial hair :
+    var facialHairNotClickedYet = $(".facialHair").not(".caracteristic-clicked");
+    if (facialHairNotClickedYet.length === 1){
+      facialHairNotClickedYet.addClass("caracteristic-clicked");
+    }
+    // hair cut :
+    var haircutNotClickedYet = $(".haircut").not(".caracteristic-clicked"); 
+    if (haircutNotClickedYet.length === 1) {
+      haircutNotClickedYet.addClass("caracteristic-clicked");
+    }
+    // hair color :
+    var hairColorNotClickedYet = $(".hairColor").not(".caracteristic-clicked"); 
+    if (hairColorNotClickedYet.length === 1) {
+      hairColorNotClickedYet.addClass("caracteristic-clicked");
+    }
+    // french native :
+    var frenchNativeNotClickedYet = $(".frenchNative").not(".caracteristic-clicked"); 
+    if (frenchNativeNotClickedYet.length === 1){
+      frenchNativeNotClickedYet.addClass("caracteristic-clicked");
+    }
+
+    // main feature (suite)
     var firstClass = e.currentTarget.className.split(' ')[1];
     var secondClass = e.currentTarget.className.split(' ')[2];
     var people = $(".people");
     people.each(function(index){
-      console.log(guessWhoPeople[firstClass])
+      // console.log(guessWhoPeople[firstClass])
       if (guessWhoPeople[firstClass] === secondClass){
         if (!$(this).hasClass(secondClass)){
           $(this).css({"opacity" : "0"});
