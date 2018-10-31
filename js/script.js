@@ -123,7 +123,7 @@ var people = [
   { name: 'harnit',
     img: 'Avatar_Harnit.png',
     genre: 'genre-female',
-    hairColor: 'hair-black',
+    hairColor: 'hair-brown',
     haircut: 'haircut-long',
     eyesColor: 'eyes-brown',
     facialHair: 'facialhair-no',
@@ -282,10 +282,19 @@ $(document).ready(function(){
   // use the shuffle function to shuffle randomnly the cards
   guessWho.shuffleCards();
 
+  // lvl
+  guessWho.chooseLevel();
+
   // show the popup welcome at the begining of the game, when we refresh the page
   var startgame = $('.popup-welcome');
   startgame.css({"display" : "block"});
   $(".game").addClass("blocked");
+  $(".hidden-people-div").addClass("blocked");
+
+  // hidden character popup
+  $('.hidden-people-div').hover(function() {
+    $('.popup-secret-character').toggle();
+  })
 
   // Array of every people
   console.log(guessWho.people);
@@ -300,6 +309,7 @@ $(document).ready(function(){
   // Add all the div's to the HTML
   $('#avatars-board').html(html);
 
+  // guess who people 
   var guessWhoPeople = people[Math.floor(Math.random()*people.length)];
   console.log(guessWhoPeople);
 
@@ -313,53 +323,131 @@ $(document).ready(function(){
   // main feature : hide the wrong people after clicking on caracteristics buttons
   var buttons = $(".caracteristic");
   var guessWho = new GuessWho(people);
+  var arrayAttributes = [];
   buttons.click(function (e){
     var currentbutton = $(event.target);
+    var firstClass = e.currentTarget.className.split(' ')[1];
+    var secondClass = e.currentTarget.className.split(' ')[2];
     guessWho.updateChances()
-    // console.log(e.currentTarget);
+    
+    var peopleKeys = Object.keys(guessWhoPeople);
 
     // add a new class to the characteristic (<img>) clicked
     currentbutton.addClass("caracteristic-clicked");
+
+    var genreNotClickedYet = $(".genre").not(".caracteristic-clicked");
+
     // genre :
-    var genreNotClickedYet = $(".genre").not(".caracteristic-clicked"); // returns the genre which is not clicked yet
-    if (genreNotClickedYet.length === 1){
+  // returns the genre which is not clicked yet
+    if (genreNotClickedYet.length === 1 || secondClass === guessWhoPeople.genre){
       genreNotClickedYet.addClass("caracteristic-clicked");
     }
     //eyes color :
     var eyesColorNotClickedYet = $(".eyesColor").not(".caracteristic-clicked"); 
-    if (eyesColorNotClickedYet.length === 1) {
+    if (eyesColorNotClickedYet.length === 1 || secondClass === guessWhoPeople.eyesColor) {
       eyesColorNotClickedYet.addClass("caracteristic-clicked");
     }
     //skin :
     var skinNotClickedYet = $(".skin").not(".caracteristic-clicked");
-    if (skinNotClickedYet.length === 1) {
+    if (skinNotClickedYet.length === 1 || secondClass === guessWhoPeople.skin) {
       skinNotClickedYet.addClass("caracteristic-clicked");
     }
     // glasses :
     var glassesNotClickedYet = $(".glasses").not(".caracteristic-clicked");
-    if (glassesNotClickedYet.length === 1){
+    if (glassesNotClickedYet.length === 1 || secondClass === guessWhoPeople.glasses){
       glassesNotClickedYet.addClass("caracteristic-clicked");
     }
     // facial hair :
     var facialHairNotClickedYet = $(".facialHair").not(".caracteristic-clicked");
-    if (facialHairNotClickedYet.length === 1){
+    if (facialHairNotClickedYet.length === 1 || secondClass === guessWhoPeople.facialHair){
       facialHairNotClickedYet.addClass("caracteristic-clicked");
     }
     // hair cut :
     var haircutNotClickedYet = $(".haircut").not(".caracteristic-clicked"); 
-    if (haircutNotClickedYet.length === 1) {
+    if (haircutNotClickedYet.length === 1 || secondClass === guessWhoPeople.haircut) {
       haircutNotClickedYet.addClass("caracteristic-clicked");
     }
     // hair color :
     var hairColorNotClickedYet = $(".hairColor").not(".caracteristic-clicked"); 
-    if (hairColorNotClickedYet.length === 1) {
+    if (hairColorNotClickedYet.length === 1 || secondClass === guessWhoPeople.hairColor) {
       hairColorNotClickedYet.addClass("caracteristic-clicked");
     }
     // french native :
     var frenchNativeNotClickedYet = $(".frenchNative").not(".caracteristic-clicked"); 
-    if (frenchNativeNotClickedYet.length === 1){
+    if (frenchNativeNotClickedYet.length === 1 || secondClass === guessWhoPeople.frenchNative){
       frenchNativeNotClickedYet.addClass("caracteristic-clicked");
     }
+
+    var isChecked = false;
+    peopleKeys.forEach(function (key){
+
+      if(secondClass === guessWhoPeople[key] && !isChecked){
+       // create the HTML img divs for each people
+       var htmlThree = $(
+        '<h5>'+ currentbutton.attr('name') + '</h5>'
+       );
+        // Add all the div's to the HTML
+        $('.popup-secret h2').after(htmlThree);
+        isChecked = true;
+        } else if (firstClass == "genre" && genreNotClickedYet.hasClass("caracteristic-clicked") && !isChecked){
+          console.log(genreNotClickedYet)
+          var htmlThree = $(
+            '<h5>'+ prettyPhrases[guessWhoPeople.genre] + '</h5>'
+          );
+          $('.popup-secret h2').after(htmlThree);
+          isChecked = true; }
+         else if (firstClass == "skin" && skinNotClickedYet.hasClass("caracteristic-clicked") && !isChecked){
+          console.log(skinNotClickedYet)
+          var htmlThree = $(
+            '<h5>'+ prettyPhrases[guessWhoPeople.skin] + '</h5>'
+          );
+          $('.popup-secret h2').after(htmlThree);
+          isChecked = true;
+        } else if (firstClass == "eyesColor" && eyesColorNotClickedYet.hasClass("caracteristic-clicked") && !isChecked){
+          console.log(eyesColorNotClickedYet)
+          var htmlThree = $(
+            '<h5>'+ prettyPhrases[guessWhoPeople.eyesColor] + '</h5>'
+          );
+          $('.popup-secret h2').after(htmlThree);
+          isChecked = true;
+        } else if (firstClass == "glasses" && glassesNotClickedYet.hasClass("caracteristic-clicked") && !isChecked){
+          console.log(glassesNotClickedYet)
+          var htmlThree = $(
+            '<h5>'+ prettyPhrases[guessWhoPeople.glasses] + '</h5>'
+          );
+          $('.popup-secret h2').after(htmlThree);
+          isChecked = true;
+        } else if (firstClass == "facialHair" && facialHairNotClickedYet.hasClass("caracteristic-clicked") && !isChecked){
+          console.log(facialHairNotClickedYet)
+          var htmlThree = $(
+            '<h5>'+ prettyPhrases[guessWhoPeople.facialHair] + '</h5>'
+          );
+          $('.popup-secret h2').after(htmlThree);
+          isChecked = true;
+        } else if (firstClass == "haircut" && haircutNotClickedYet.hasClass("caracteristic-clicked") && !isChecked){
+          console.log(haircutNotClickedYet)
+          var htmlThree = $(
+            '<h5>'+ prettyPhrases[guessWhoPeople.haircut] + '</h5>'
+          );
+          $('.popup-secret h2').after(htmlThree);
+          isChecked = true;
+        } else if (firstClass == "hairColor" && hairColorNotClickedYet.hasClass("caracteristic-clicked") && !isChecked){
+          console.log(hairColorNotClickedYet)
+          var htmlThree = $(
+            '<h5>'+ prettyPhrases[guessWhoPeople.hairColor] + '</h5>'
+          );
+          $('.popup-secret h2').after(htmlThree);
+          isChecked = true;
+        } else if (firstClass == "frenchNative" && frenchNativeNotClickedYet.hasClass("caracteristic-clicked") && !isChecked){
+          console.log(frenchNativeNotClickedYet)
+          var htmlThree = $(
+            '<h5>'+ prettyPhrases[guessWhoPeople.frenchNative] + '</h5>'
+          );
+          $('.popup-secret h2').after(htmlThree);
+          isChecked = true;
+        } 
+    })
+    console.log(arrayAttributes);
 
     // main feature (suite)
     var firstClass = e.currentTarget.className.split(' ')[1];
@@ -384,11 +472,50 @@ $(document).ready(function(){
     guessWho.isFinished()
   });
 
+var prettyPhrases = {
+  "genre-female": "Gender : female",
+  "genre-male": "Gender : male",
+  "skin-white": "Skin color : white",
+  "skin-metis": "Skin color : metis",
+  "skin-black": "Skin color : black",
+  "eyes-brown": "Eyes color : brown",
+  "eyes-green": "Eyes color : green",
+  "eyes-blue": "Eyes color : blue",
+  "glasses-yes": "Glasses",
+  "glasses-no": "No glasses",
+  "facialhair-yes": "Facial hair",
+  "facialhair-no": "No facial hair",
+  "haircut-short": "Haircut : short hair",
+  "haircut-medium": "Haircut : medium hair",
+  "haircut-long": "Haircut : long hair",
+  "hair-blond": "Hair color : blond hair",
+  "hair-ginger": "Hair color : ginger hair",
+  "hair-brown": "Hair color : brown hair",
+  "hair-black": "Hair color : black hair",
+  "frenchnative-yes": "French origin",
+  "frenchnative-no": "No french origin",
+};
+
   // restart the game
   var restartgame = $(".btn-restart");
   restartgame.click(function (){
+    startgame.css({"display" : "none"});
     window.location.reload();
     startgame.css({"display" : "none"});
+  })
+
+// 'enter' instead of click on restart button
+  var popupLooser = $(".popup-looser");
+  var popupWinner = $(".popup-winer");
+  $(document).keydown( function (event) {
+    if (event.keyCode === 13) {
+      if ( popupLooser.is(':visible') ){
+        $(".btn-popup-looser").click();
+      }
+      else if ( popupWinner.is(':visible') ){
+        $(".btn-popup-winer").click();
+      }
+    }
   })
 
   // click directly on people to try to find the guessWhoPeople
@@ -413,16 +540,19 @@ $(document).ready(function(){
     var start = $('.popup-welcome');
     start.css({"display" : "none"});
     $(".game").removeClass("blocked");
+    $(".hidden-people-div").removeClass("blocked");
   })
 
 });
+
+
+var remainingChances;
 
 // class GuesWho
   class GuessWho {
 
     constructor(people){
     this.people = people;
-    this.remainingChances = 5;
     }
   
    // shuffle randomnly the cards 
@@ -444,9 +574,9 @@ $(document).ready(function(){
 
     updateChances() {
       var looser = $('.popup-looser');
-      this.remainingChances --;
-      $("#remaining-chances").html(this.remainingChances);
-      if (this.remainingChances === 0){
+      remainingChances --;
+      $("#remaining-chances").html(remainingChances);
+      if (remainingChances === 0){
         looser.css({"display" : "block"});
         $(".game").addClass("blocked");
       }
@@ -459,5 +589,23 @@ $(document).ready(function(){
         $(".game").addClass("blocked");
       } 
     } 
+
+    chooseLevel(){
+      $(".btn-easy-lvl").click(function(){
+        console.log("hard lvl");
+        remainingChances = 6;
+        $("#remaining-chances").html(remainingChances);
+      })
+      $(".btn-medium-lvl").click(function(){
+        console.log("hard lvl");
+        remainingChances = 5;
+        $("#remaining-chances").html(remainingChances);
+      })
+      $(".btn-hard-lvl").click(function(){
+        console.log("hard lvl");
+        remainingChances = 4;
+        $("#remaining-chances").html(remainingChances);
+      })
+    }
 
 };

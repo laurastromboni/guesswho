@@ -3,6 +3,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  z-index: 10;
 }
 
 .container{
@@ -105,7 +106,7 @@ header{
   background-size: contain;
   background-repeat: no-repeat;
 	width: 160px;
-  height: 200px;
+  height: 184px;
   margin-top: 10px;
 }
 
@@ -136,8 +137,22 @@ header{
 }
 
 .btn-popup-welcome{
-  background-color: #A779BC;    
+  width: 150px;
+  margin: 0 10px; 
 }
+
+.btn-easy-lvl{
+  background-color: rgb(116, 206, 191);   
+}
+
+.btn-medium-lvl{
+  background-color: #A779BC; 
+}
+
+.btn-hard-lvl{
+  background-color: rgb(163, 88, 88); 
+}
+
 
 .btn-popup-looser{
   background-color: #F95050;
@@ -157,7 +172,7 @@ h5{
   font-weight: bolder;
 }
 
-.popup-welcome, .popup-looser, .popup-winer{
+.popup-welcome, .popup-looser, .popup-winer, .popup-secret-character{
   display: none;
 }
 
@@ -167,6 +182,31 @@ h5{
 
 .front-people:hover {
   transform: scale(2);
+}
+
+.levels{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
+.secret{
+  background-image: url(../img/Avatar_Discovered.png);
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center;
+  width:80px;
+	height:100px;
+  margin:20px;
+  position: fixed;
+  float: left;
+  box-shadow: 1px 0px 5px rgb(121, 121, 121);
+  bottom: 0;
+  right: 0;
+}
+
+.popup-bigscreen{
+  display:none;
 }
 
 @media (max-width:1199px){
@@ -197,6 +237,56 @@ h5{
 
 }
 
+@media (max-width:992px){
+
+  .game, .hidden-people-div, footer, .popup-looser, .popup-welcome, .popup-winer, .popup-secret-character{
+    display: none;
+  }
+
+  .popup-bigscreen{
+    display:block;
+  } 
+  
+  .btn{
+    display: none;
+  }
+}
+
+@media (max-width:775px){
+
+  .pop{
+    width: 600px;    
+    padding: 30px;
+  } 
+
+}
+
+@media (max-width:660px){
+
+  .pop{
+    width: 500px;    
+    padding: 30px;
+  } 
+
+}
+
+@media (max-width:560px){
+
+  .pop{
+    width: 350px;
+    height: 450px;    
+    padding: 30px;
+  } 
+
+  h2{
+    font-family: Helvetica-bold, sans-serif;
+    letter-spacing: 0.47px;
+    font-size: 25px;
+  }
+
+}
+
+/* 
 @media (max-width:991px){
 
   .right-side-column{
@@ -228,9 +318,9 @@ h5{
     padding-left: 10%;
   }
 
-}
+} */
 
-@media (max-width:660px){
+/* @media (max-width:660px){
 
   .right-side-column{
     padding-right: 10%;
@@ -289,4 +379,4 @@ h5{
     padding-left: 5%;
   }
 
-}
+} */

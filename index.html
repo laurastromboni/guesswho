@@ -34,7 +34,18 @@
         <h6>Be careful, you have limited remaining chances to find it !</h6>
         <h6>Good luck !</h6>
         <div class="popup-img"></div>
-        <button type="button" class="btn btn-popup-welcome">Start the game</button>
+        <div class="levels">
+          <button type="button" class="btn btn-popup-welcome btn-easy-lvl">Easy</button>
+          <button type="button" class="btn btn-popup-welcome btn-medium-lvl">Medium</button>
+          <button type="button" class="btn btn-popup-welcome btn-hard-lvl">Hard</button>
+        </div>
+        <!-- <button type="button" class="btn btn-popup-welcome">Start the game</button> -->
+      </div>
+    </section>
+
+    <section class="popup popup-bigscreen">
+      <div class="pop popup-secret">
+        <h2>Oh...<br>You need a biggest screen to play to this game...</h2>
       </div>
     </section>
 
@@ -52,6 +63,13 @@
       </div>
     </section>
 
+    <section class="popup popup-secret-character">
+      <div class="pop popup-secret">
+        <h2>Your secret character has...</h2>
+      
+      </div>
+    </section>
+
     <section class="game">
 
       <div class="container">
@@ -60,31 +78,31 @@
               <div class="genre-row">
                 <h5>Gender</h5>
                 <div class="genre-content item-content">
-                  <img src="img/Genre-female.svg" class="caracteristic genre genre-female"/>
-                  <img src="img/Genre-male.svg" class="caracteristic genre genre-male" />
+                  <img src="img/Genre-female.svg" class="caracteristic genre genre-female" name="Gender : female"/>
+                  <img src="img/Genre-male.svg" class="caracteristic genre genre-male" name="Gender : male"/>
                 </div>
               </div>
               <div class="skincolor-row">
                 <h5>Skin Color</h5>
                 <div class="skincolor-content item-content">
-                  <img src="img/Skin-white.svg" class="caracteristic skin skin-white"/>
-                  <img src="img/Skin-metis.svg" class="caracteristic skin skin-metis" />
-                  <img src="img/Skin-brown.svg" class="caracteristic skin skin-black" />
+                  <img src="img/Skin-white.svg" class="caracteristic skin skin-white" name="Skin color : white"/>
+                  <img src="img/Skin-metis.svg" class="caracteristic skin skin-metis" name="Skin color : metis"/>
+                  <img src="img/Skin-brown.svg" class="caracteristic skin skin-black" name="Skin color : black"/>
                 </div>
               </div>
               <div class="eyescolor-row">
                 <h5>Eyes Color</h5>
                 <div class="eyescolor-content item-content">
-                  <img src="img/Eyes-brown.svg" class="caracteristic eyesColor eyes-brown"/>
-                  <img src="img/Eyes-green.svg" class="caracteristic eyesColor eyes-green" />
-                  <img src="img/Eyes-blue.svg" class="caracteristic eyesColor eyes-blue" />
+                  <img src="img/Eyes-brown.svg" class="caracteristic eyesColor eyes-brown" name="Eyes color : brown"/>
+                  <img src="img/Eyes-green.svg" class="caracteristic eyesColor eyes-green" name="Eyes color : green"/>
+                  <img src="img/Eyes-blue.svg" class="caracteristic eyesColor eyes-blue" name="Eyes color : blue"/>
                 </div>
               </div>
               <div class="glasses-row">
                 <h5>Glasses</h5>
                 <div class="glasses-content item-content">
-                  <img src="img/Yes.svg" class="caracteristic glasses glasses-yes" />
-                  <img src="img/No.svg" class="caracteristic glasses glasses-no" />
+                  <img src="img/Yes.svg" class="caracteristic glasses glasses-yes" name="Glasses"/>
+                  <img src="img/No.svg" class="caracteristic glasses glasses-no" name="No glasses"/>
                 </div>
               </div>
             </div>
@@ -97,32 +115,32 @@
               <div class="facialhair-row">
                 <h5>Facial Hair</h5>
                 <div class="facialhair-content item-content">
-                  <img src="img/Yes.svg" class="caracteristic facialHair facialhair-yes" />
-                  <img src="img/No.svg" class="caracteristic facialHair facialhair-no" />
+                  <img src="img/Yes.svg" class="caracteristic facialHair facialhair-yes" name="Facial hair"/>
+                  <img src="img/No.svg" class="caracteristic facialHair facialhair-no" name="No facial hair"/>
                 </div>
               </div>
               <div class="haircut-row">
                 <h5>Haircut</h5>
                 <div class="haircut-content item-content">
-                  <img src="img/Haircut-short.svg" class="caracteristic haircut haircut-short"/>
-                  <img src="img/Haircut-medium.svg" class="caracteristic haircut haircut-medium" />
-                  <img src="img/Haircut-long.svg" class="caracteristic haircut haircut-long" />
+                  <img src="img/Haircut-short.svg" class="caracteristic haircut haircut-short" name="Haircut : short hair"/>
+                  <img src="img/Haircut-medium.svg" class="caracteristic haircut haircut-medium" name="Haircut : medium hair"/>
+                  <img src="img/Haircut-long.svg" class="caracteristic haircut haircut-long" name="Haircut : long hair"/>
                 </div>
               </div>
               <div class="haircolor-row">
                 <h5>Hair Color</h5>
                 <div class="haircolor-content item-content">
-                  <img src="img/Haircolor-blond.svg" class="caracteristic hairColor hair-blond"/>
-                  <img src="img/Haircolor-ginger.svg" class="caracteristic hairColor hair-ginger" />
-                  <img src="img/Haircolor-brown.svg" class="caracteristic hairColor hair-brown" />
-                  <img src="img/Haircolor-black.svg" class="caracteristic hairColor hair-black" />
+                  <img src="img/Haircolor-blond.svg" class="caracteristic hairColor hair-blond" name="Hair color : blond hair"/>
+                  <img src="img/Haircolor-ginger.svg" class="caracteristic hairColor hair-ginger" name="Hair color : ginger hair"/>
+                  <img src="img/Haircolor-brown.svg" class="caracteristic hairColor hair-brown" name="Hair color : brown hair"/>
+                  <img src="img/Haircolor-black.svg" class="caracteristic hairColor hair-black" name="Hair color : black hair"/>
                 </div>
               </div>
               <div class="frenchnative-row">
                 <h5>French Native</h5>
                 <div class="frenchnative-content item-content">
-                  <img src="img/Yes.svg" class="caracteristic frenchNative frenchnative-yes" />
-                  <img src="img/No.svg" class="caracteristic frenchNative frenchnative-no" />
+                  <img src="img/Yes.svg" class="caracteristic frenchNative frenchnative-yes" name="French origin"/>
+                  <img src="img/No.svg" class="caracteristic frenchNative frenchnative-no" name="No french origin"/>
                 </div>
               </div>
             </div>
@@ -131,9 +149,13 @@
 
     </section>
 
+    <section class= "hidden-people-div">
+      <div class= "secret"></div>
+    </section>
+
     <footer>
       <div id="chances">
-        <h5>Remaining chances : <span id="remaining-chances">5</span></h5>
+        <h5>Remaining chances : <span id="remaining-chances">?</span></h5>
       </div>
     </footer>
 
