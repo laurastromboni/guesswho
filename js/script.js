@@ -558,7 +558,6 @@ var prettyPhrases = {
     $(".game").removeClass("blocked");
     $(".hidden-people-div").removeClass("blocked");
     //sound 
-    soundClick.play()
     soundTheme.play()
   })
 
