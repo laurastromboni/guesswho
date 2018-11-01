@@ -237,6 +237,52 @@ h5{
 
 }
 
+
+/* ipad landscape */
+@media only screen and (min-device-width : 768px) and (max-device-width : 1024px) and (orientation : portrait) {
+  .popup{
+    margin-top:10%;
+  }
+}
+
+/* ipad landscape */
+@media only screen and (min-device-width : 768px) and (max-device-width : 1024px) and (orientation : landscape) {
+  .game{
+    margin-top: 2%;
+  }
+}
+
+/* ipad pro landscape */
+@media only screen and (min-device-width: 1025px) and (max-device-width: 1366px) and (orientation: landscape) {
+  .game{
+    margin-top: 10%;
+  }
+  .popup{
+    margin-top: 10%;
+  }
+}
+
+/* ipad pro portrait */
+@media only screen and (min-device-width: 1024px) and (max-device-width: 1366px) and (orientation: portrait) {
+
+  .game, .hidden-people-div, footer, .popup-looser, .popup-welcome, .popup-winer, .popup-secret-character{
+    display: none;
+  }
+
+  .popup-bigscreen{
+    display:block;
+  } 
+  
+  .btn{
+    display: none;
+  }
+  
+  .popup{
+    margin-top: 30%;
+  }
+
+}
+
 @media (max-width:992px){
 
   .game, .hidden-people-div, footer, .popup-looser, .popup-welcome, .popup-winer, .popup-secret-character{
@@ -259,6 +305,10 @@ h5{
     padding: 30px;
   } 
 
+  .popup{
+    transform: translate(-50%,60%);
+  }
+
 }
 
 @media (max-width:660px){
@@ -273,9 +323,10 @@ h5{
 @media (max-width:560px){
 
   .pop{
-    width: 350px;
-    height: 450px;    
+    width: 320px;
+    height: 500px;    
     padding: 30px;
+    border: 8px solid black;
   } 
 
   h2{
@@ -283,6 +334,40 @@ h5{
     letter-spacing: 0.47px;
     font-size: 25px;
   }
+
+  .popup{
+    transform: translate(-50%,30%);
+  }
+
+}
+
+@media only screen and (device-width: 375px) and (device-height: 812px) and (-webkit-device-pixel-ratio: 3) {
+
+  .popup{
+    margin-top:20%; 
+  } 
+
+}
+
+@media (max-width:375px){
+
+  .pop{
+    width: 300px;
+    height: 470px;    
+    padding: 30px;
+    border: 8px solid black;
+  } 
+
+}
+
+@media (max-width:330px){
+
+  .pop{
+    width: 250px;
+    height: 400px;    
+    padding: 30px;
+    border: 8px solid black;
+  } 
 
 }
 
