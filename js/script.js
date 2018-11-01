@@ -1,3 +1,12 @@
+var soundClick = new Audio();
+soundClick.src = "./sounds/click.wav"
+var soundLooser = new Audio();
+soundLooser.src = "./sounds/looser.wav"
+var soundWinner = new Audio();
+soundWinner.src = "./sounds/winner.wav"
+var soundTheme = new Audio();
+soundTheme.src = "./sounds/themesong.mp3"
+
 var people = [
   { name: 'abi',
     img: 'Avatar_Abi.png',
@@ -325,6 +334,10 @@ $(document).ready(function(){
   var guessWho = new GuessWho(people);
   var arrayAttributes = [];
   buttons.click(function (e){
+
+    //sound 
+    soundClick.play()
+
     var currentbutton = $(event.target);
     var firstClass = e.currentTarget.className.split(' ')[1];
     var secondClass = e.currentTarget.className.split(' ')[2];
@@ -521,12 +534,15 @@ var prettyPhrases = {
   // click directly on people to try to find the guessWhoPeople
   var peoplebutton = $(".people");
   peoplebutton.click(function (e){
+    soundClick.play()
     guessWho.updateChances()
     var pers = e.currentTarget;
     var winner = $('.popup-winer');
     if (pers.getAttribute("data-people-name") === guessWhoPeople.name){
       winner.css({"display" : "block"});
       $(".game").addClass("blocked");
+      soundTheme.pause()
+      soundWinner.play()
     } else {
       $(pers).css({"opacity" : "0"});
       $(pers).addClass("hidden-people");
@@ -541,6 +557,9 @@ var prettyPhrases = {
     start.css({"display" : "none"});
     $(".game").removeClass("blocked");
     $(".hidden-people-div").removeClass("blocked");
+    //sound 
+    soundClick.play()
+    soundTheme.play()
   })
 
 });
@@ -578,6 +597,8 @@ var remainingChances;
       $("#remaining-chances").html(remainingChances);
       if (remainingChances === 0){
         looser.css({"display" : "block"});
+        soundTheme.pause()
+        soundLooser.play()
         $(".game").addClass("blocked");
         $(".hidden-people-div").addClass("blocked");
       }
@@ -587,8 +608,18 @@ var remainingChances;
       if ( $(".people").length - $(".hidden-people").length === 1){
         var winner = $('.popup-winer');
         winner.css({"display" : "block"});
+        soundTheme.pause()
+        soundWinner.play()
         $(".game").addClass("blocked");
         $(".hidden-people-div").addClass("blocked");
+        // if ( popupLooser.is(':visible') ){
+        //   soundTheme.pause()
+        //   soundLooser.play()
+        // }
+        // else if ( popupWinner.is(':visible') ){
+        //   soundTheme.pause()
+        //   soundWinner.play()
+        // }
       } 
     } 
 
