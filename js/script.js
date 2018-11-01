@@ -579,6 +579,7 @@ var remainingChances;
       if (remainingChances === 0){
         looser.css({"display" : "block"});
         $(".game").addClass("blocked");
+        $(".hidden-people-div").addClass("blocked");
       }
     }
 
@@ -587,6 +588,7 @@ var remainingChances;
         var winner = $('.popup-winer');
         winner.css({"display" : "block"});
         $(".game").addClass("blocked");
+        $(".hidden-people-div").addClass("blocked");
       } 
     } 
 

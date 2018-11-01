@@ -25,8 +25,8 @@ header{
 }
 
 #game-table{
-  background: #81C5C9;
-  border: 10px solid #519A9E;
+  background: #94b5c9;
+  border: 10px solid #7094aa;
   width: 520px;
   height: 620px;
   margin: 0 auto;
@@ -138,7 +138,13 @@ header{
 
 .btn-popup-welcome{
   width: 150px;
-  margin: 0 10px; 
+  margin: 0 10px;
+}
+
+.btn:hover{
+  -webkit-transform: scale(1.1);
+  -ms-transform: scale(1.1);
+  transform: scale(1.1);
 }
 
 .btn-easy-lvl{
@@ -236,7 +242,6 @@ h5{
   }
 
 }
-
 
 /* ipad landscape */
 @media only screen and (min-device-width : 768px) and (max-device-width : 1024px) and (orientation : portrait) {
